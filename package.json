@@ -1,0 +1,45 @@
+{
+    "name": "autocommenter",
+    "displayName": "Auto Comment Updater",
+    "description": "Automatically adds comments to your code",
+    "version": "0.0.1",
+    "publisher": "your-name",
+    "engines": {
+      "vscode": "^1.93.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "onLanguage:csharp",
+      "onDidChangeTextDocument"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+      "configuration": {
+        "type": "object",
+        "title": "Auto Comment Updater",
+        "properties": {
+          "autocommenter.orderComments": {
+            "type": "boolean",
+            "default": true,
+            "description": "Order parameter comments to match method parameters."
+          }
+        }
+      }
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src",
+      "test": "vscode-test"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.93.0",
+      "typescript": "^5.5.4",
+      "@vscode/test-cli": "^0.0.10"
+    }
+  }
+  
