@@ -27,7 +27,7 @@ Navigate to the directory where you want to store the project.
 Clone the Repository:
 bash
 Copy
-git clone https://github.com/YourOrgOrUsername/autocommenter.git
+git clone https://github.com/gponi/comment-test-app-from-vscode
 Open the Project in VS Code:
 bash
 Copy
